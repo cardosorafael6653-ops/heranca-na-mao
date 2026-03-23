@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-blue: #2563EB;
+  --color-brand-green: #059669;
+  --color-brand-orange: #D97706;
+  --color-brand-purple: #7C3AED;
+  --color-bg-light: #F8FAFC;
+  --color-text-main: #0F172A;
+  --color-text-muted: #64748B;
+  
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+body {
+  @apply bg-bg-light text-text-main font-sans antialiased;
+}
+
+.card-shadow {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateY(-2px);
+}
+
+.institutional-border {
+  @apply border border-slate-200/60;
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
